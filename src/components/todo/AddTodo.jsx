@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../store/todoSlice";
 import { useState } from "react";
+import plus from "../../assets/images/plus.svg";
 
 const AddTodo = () => {
   const dispatch = useDispatch();
@@ -44,11 +45,12 @@ const AddTodo = () => {
           className="
             px-6 py-3 rounded-lg
             bg-blue-600 text-white font-medium
+            flex gap-3
             hover:bg-blue-700
             active:scale-95 transition duration-150
           "
         >
-          Add
+          Add <img src={plus} alt="" className="w-6" />
         </button>
       </form>
     </div>

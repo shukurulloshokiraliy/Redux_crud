@@ -7,7 +7,8 @@ import {
   setEditText,
   cancelEdit,
 } from "../../store/todoSlice";
-
+import pen from "../../assets/images/pen.svg";
+import trash from "../../assets/images/trash.svg";
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
   const { editId, editText } = useSelector((state) => state.todo);
@@ -72,13 +73,13 @@ const TodoItem = ({ todo }) => {
             }
             className="text-blue-500 hover:text-blue-700"
           >
-            edit
+              <img src={pen} alt="footer-logo" className="w-6" />
           </button>
           <button
             onClick={() => dispatch(deleteTodo(todo.id))}
-            className="text-red-500 hover:text-red-700"
+            className=" "
           >
-            del
+       <img src={trash} alt="footer-logo" className="w-6  " />
           </button>
         </>
       )}
